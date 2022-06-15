@@ -1,7 +1,4 @@
-/*Programa: Área de figuras geométricas
- * Fecha: Mayo 11 de 2022
- * Autor: Juan David Martínez Herrera
- * */
+
 package ejercicio1;
 
 import java.io.BufferedReader;
@@ -13,7 +10,7 @@ public class Inicial {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 		//Bienvenida al programa
-		System.out.println("¡BIENVENIDOS!\n Este programa permite cálcular el área de tres figuras geométricas");
+		System.out.println("ã€IENVENIDOS!\n Este programa permite cå«®cular el å««ea de tres figuras geomå½‹ricas");
 		
 		int opcion;
 		double lado, radio, dMay,dMen;
@@ -21,7 +18,7 @@ public class Inicial {
 		int fin;
 		do {
 			//Menu de opciones
-			System.out.println ("Ingrese el número de la figura a la que desea calcularle el área:\n\t1) Cuadrado\n\t2) Rombo\n\t3)Circulo");
+			System.out.println ("Ingrese el nî€­ero de la figura a la que desea calcularle el å««ea:\n\t1) Cuadrado\n\t2) Rombo\n\t3)Circulo");
 			opcion= Integer.parseInt(in.readLine());
 			
 			//Area de cuadrado
@@ -30,7 +27,7 @@ public class Inicial {
 					System.out.print("Ingrese el lado del cuadrado: ");
 					lado= Double.parseDouble(in.readLine());
 					if(lado>0)
-						System.out.print("El área del cuadrado es: "+ Math.pow(lado, 2));
+						System.out.print("El å««ea del cuadrado es: "+ Math.pow(lado, 2));
 					if(lado<=0)System.out.println("El lado del cuadrado no es valido");
 				}
 				while(lado<=0);
@@ -49,7 +46,7 @@ public class Inicial {
 				while(dMen>dMay || dMen<=0 || dMay<=0);
 				area=(dMay*dMen)/2;
 				area=Math.round(area*100.0)/100.0;
-				System.out.println("El área del rombo es: "+((dMay*dMen)/2));
+				System.out.println("El å««ea del rombo es: "+((dMay*dMen)/2));
 			}
 			
 			//Area de circulo
@@ -64,16 +61,16 @@ public class Inicial {
 				while(radio<0);				
 				area=Math.PI*(Math.pow(radio, 2));
 				area=Math.round(area*100.0)/100.0;
-				System.out.println("El área del circulo es: "+ Math.PI*(Math.pow(radio, 2)));
+				System.out.println("El å««ea del circulo es: "+ Math.PI*(Math.pow(radio, 2)));
 			}
 			
 			//Opcion invalida
 			else {
-				System.out.println("Esta no es una opción válida\n");
+				System.out.println("Esta no es una opcié® vå«®ida\n");
 			}
 			
-			//Nuevo cálculo
-			System.out.println("\nSi desea finalizar el programa ingrese 0, de lo contrario ingrese otro número\n");
+			//Nuevo cå«®culo
+			System.out.println("\nSi desea finalizar el programa ingrese 0, de lo contrario ingrese otro nî€­ero\n");
 			fin= Integer.parseInt(in.readLine());
 		}
 		while(fin!=0);
